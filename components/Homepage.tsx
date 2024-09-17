@@ -57,7 +57,7 @@ export default function Homepage() {
         variants={parentVariants}
       >
         <motion.div
-          className="flex justify-center mb-[80px] w-full"
+          className="flex justify-center mb-[80px] w-full max-w-[450px]"
           transition={transitionConfig()}
           variants={childVariants}
           initial="hidden"
