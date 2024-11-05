@@ -6,10 +6,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 // components
+import LoadingSection from "@/components/LoadingElement";
 import Splashpage from "@/components/Home/Splashpage";
 import Main from "@/components/Home/Main";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Tickets from "@/components/Tickets/Tickets";
+import ReExperienceCUSEC from "@/components/ReExperienceCUSEC/ReExperienceCUSEC";
+import FAQ from "@/components/FAQ/FAQ";
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(false);
@@ -32,10 +35,20 @@ export default function Home() {
         ) : (
           <>
             <div className="h-auto flex items-center justify-center mt-[65px]">
-              <Main />
+              <LoadingSection delay={0}>
+                <Main />
+              </LoadingSection>
             </div>
-            <AboutUs />
-            <Tickets />
+            <LoadingSection delay={0.1}>
+              <AboutUs />
+            </LoadingSection>
+            <LoadingSection delay={0.2}>
+              <Tickets />
+            </LoadingSection>
+            <LoadingSection delay={0.3}>
+              <ReExperienceCUSEC />
+            </LoadingSection>
+            <FAQ />
           </>
         )}
       </main>
