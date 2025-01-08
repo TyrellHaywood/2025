@@ -15,7 +15,7 @@ export default function privacyPolicy() {
       <title>Privacy Policy</title>
       <LoadingElement delay={0}>
         <main className="flex flex-col overflow-x-hidden min-h-screen justify-center">
-          <div className="h-auto flex items-center justify-center my-[65px]">
+          <div className="h-auto flex items-center justify-center mt-[191px] mb-[65px]">
             <PrivacyPolicy />
           </div>
         </main>
